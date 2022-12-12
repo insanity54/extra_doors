@@ -1,4 +1,4 @@
-st--------------------------------------------------------
+--------------------------------------------------------
 -- Minetest :: Extra Doors v2.0 (extra_doors)
 --
 -- See README.txt for licensing and release notes.
@@ -8,13 +8,16 @@ st--------------------------------------------------------
 -- One of the most essential but often overlooked elements of building design is door selection.
 -- Doors set the tone and character, and having the wrong style of door can make or break a build.
 
-minetest.register_craftitem( ":default:steel_rod", {
+
+
+
+minetest.register_craftitem("extra_doors:steel_rod", {
         description = "Steel Rod",
-        inventory_image = "default_steel_rod.png",
-} )
+        inventory_image = "doors_steel_rod.png",
+})
 
 minetest.register_craft( {
-        output = "default:steel_rod 4",
+        output = "extra_doors:steel_rod 4",
         recipe = {
                 { "default:steel_ingot" },
         }
@@ -126,7 +129,7 @@ doors.register( "door_barn2", {
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
 		{ "group:wood", "group:wood", "group:wood" },
-		{ "default:steel_rod", "default:steel_rod", "default:steel_rod" },
+		{ "extra_doors:steel_rod", "extra_doors:steel_rod", "extra_doors:steel_rod" },
 		{ "group:wood", "group:wood", "group:wood" },
 	}
 } )
@@ -149,9 +152,9 @@ doors.register( "door_castle2", {
 	inventory_image = "doors_item_castle2.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "default:steel_rod", "group:wood", "group:wood" },
+		{ "extra_doors:steel_rod", "group:wood", "group:wood" },
 		{ "", "group:wood", "group:wood" },
-		{ "default:steel_rod", "group:wood", "group:wood" },
+		{ "extra_doors:steel_rod", "group:wood", "group:wood" },
 	}
 } )
 
@@ -189,9 +192,9 @@ doors.register("door_dungeon1", {
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	recipe = {
-		{ "default:steel_ingot", "default:steel_rod", "default:steel_ingot" },
-		{ "default:steel_rod", "default:steel_rod", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_rod", "default:steel_ingot" },
+		{ "default:steel_ingot", "extra_doors:steel_rod", "default:steel_ingot" },
+		{ "extra_doors:steel_rod", "extra_doors:steel_rod", "extra_doors:steel_rod" },
+		{ "default:steel_ingot", "extra_doors:steel_rod", "default:steel_ingot" },
 	}
 } )
 
@@ -205,7 +208,7 @@ doors.register( "door_dungeon2", {
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	recipe = {
-		{ "default:steel_rod", "default:steel_rod", "default:steel_rod" },
+		{ "extra_doors:steel_rod", "extra_doors:steel_rod", "extra_doors:steel_rod" },
 		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
 		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
 	}
@@ -221,9 +224,9 @@ doors.register( "door_steelpanel1", {
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	recipe = {
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
+		{ "default:steel_ingot", "default:steel_ingot", "extra_doors:steel_rod" },
+		{ "default:steel_ingot", "default:steel_ingot", "extra_doors:steel_rod" },
+		{ "default:steel_ingot", "default:steel_ingot", "extra_doors:steel_rod" },
 	}
 } )
 
@@ -237,7 +240,7 @@ doors.register( "door_steelglass1", {
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	recipe = {
-		{ "default:glass", "default:glass", "default:steel_rod" },
+		{ "default:glass", "default:glass", "extra_doors:steel_rod" },
 		{ "default:steel_ingot", "default:steel_ingot", "" },
 		{ "default:steel_ingot", "default:steel_ingot", "" },
 	}
@@ -253,32 +256,32 @@ doors.register( "door_steelglass2", {
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	recipe = {
-		{ "default:glass", "default:glass", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
+		{ "default:glass", "default:glass", "extra_doors:steel_rod" },
+		{ "default:steel_ingot", "default:steel_ingot", "extra_doors:steel_rod" },
 		{ "default:steel_ingot", "default:steel_ingot", "" },
 	}
 } )
 
 minetest.register_craft( {
 	type = "fuel",
-	recipe = "doors:door_barn1",
+	recipe = "extra_doors:door_barn1",
 	burntime = 14,
 } )
 
 minetest.register_craft( {
 	type = "fuel",
-	recipe = "doors:door_barn2",
+	recipe = "extra_doors:door_barn2",
 	burntime = 16,
 } )
 
 minetest.register_craft( {
 	type = "fuel",
-	recipe = "doors:door_castle1",
+	recipe = "extra_doors:door_castle1",
 	burntime = 8,
 } )
 
 minetest.register_craft( {
 	type = "fuel",
-	recipe = "doors:door_castle2",
+	recipe = "extra_doors:door_castle2",
 	burntime = 12,
 } )
